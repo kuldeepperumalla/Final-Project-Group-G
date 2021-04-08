@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: 'beyond_the_mountains';
+    src: url(../fonts/beyond_the_mountains/beyond_the_mountains.otf);
+}
+
+
+.showcase {
+    font-family: 'beyond_the_mountains';
+    font-size: 6em;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    color: white;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/slider_1_1920_1200.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+nav {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    background-color: #0009;
+    z-index: 999;
+    line-height: 80px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+
+    font-family: Calibri, sans-serif;
+    text-transform: uppercase;
+    /* transition: 0.8s all; */
+}
+
+nav ul li a:hover {
+    background-color: #b6b6b6;
+}
+
+.logo {
+    width: 120px;
+    margin: 10px 10px 10px 40px;
+}
+
+/* toggle nav bar */
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+/* our story */
+.story-images {
+    display: flex;
+    flex-direction: row;
+}
+
+.tomato-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5% 0;
+    width: 100%;
+}
+
+.tomato{
+    width: 3%;
+}
+
+
+.img-right img{
+    width: 100%;
+    margin: 0 !important;
+}
+
+.img-left img{
+    width: 100%;
+}
+
+.story-title{
+    font-family: 'beyond_the_mountains';
+    font-size: 4vw;
+    text-align: center;
+    color: black;
+}
+
+.story-content{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 8% 0;
+    width: 100%;
+    font-size: 1.2vw;
+}
+
+.story-content-left, .story-content-right {
+    margin: 0 10px;
+}
+
+.mobilestory-content {
+    display: none;
+}
+
+/* media */
+
+@media screen and (max-width: 768px) {
+    @font-face {
+        font-family: 'Roboto-Light';
+        src: url(../fonts/Roboto/Roboto-Light.ttf);
+    }
+    .showcase {
+        font-family: 'beyond_the_mountains';
+        font-size: 3em;
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%;
+        color: white;
+    }
+    nav .links {
+        float: none;
+        display: flex;
+        text-align: center;
+        position: fixed;
+        z-index: 4;
+        left: 0;
+        right: -30px;
+        top: 79px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: black;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
+    }
+    nav .links a {
+        font-size: 20px;
+    }
+    nav :checked~.links {
+        bottom: 0;
+    }
+    nav .icon-burger {
+        display: block;
+    }
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+    /* story */
+    .story-content{
+        display: none;
+    }
+
+    .mobilestory-content{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 8px;
+        font-size: 1.2em;
+        font-family: 'Roboto-Light'
+    }
+    .story-content-left, .story-content-right{
+        margin: 10px;
+
+    }
+
+    
+}
